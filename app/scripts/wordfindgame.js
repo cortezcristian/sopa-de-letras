@@ -312,7 +312,7 @@ window.mobilecheck = function() {
                     if(diffBlocks.x !== 0 ){
                         console.log("Horizontal");
                         if(diffBlocks.x > 0){
-                            console.log("Vertical hacia Der");
+                            console.log("Horizontal hacia Der");
                             for(var i=$(lStart).attr('x'); i<=$(lEnd).attr('x'); i++){
                                 // x incresase
                                 $('.puzzleSquare[x='+i+'][y='+$(lStart).attr('y')+']').trigger('MobileSuggestedOver');
@@ -320,7 +320,7 @@ window.mobilecheck = function() {
                             $('.puzzleSquare[x='+$(lEnd).attr('x')+'][y='+$(lEnd).attr('y')+']')
                                 .trigger('MobileTouch2');
                         }else{
-                            console.log("Vertical hacia Izq");
+                            console.log("Horizontal hacia Izq");
                             for(var i=$(lStart).attr('x'); i>=$(lEnd).attr('x'); i--){
                                 // x decrease
                                 $('.puzzleSquare[x='+i+'][y='+$(lStart).attr('y')+']').trigger('MobileSuggestedOver');
@@ -332,8 +332,20 @@ window.mobilecheck = function() {
                         console.log("Vertical");
                         if(diffBlocks.y > 0){
                             console.log("Vertical hacia Abajo");
+                            for(var i=$(lStart).attr('y'); i<=$(lEnd).attr('y'); i++){
+                                // y increase
+                                $('.puzzleSquare[x='+$(lStart).attr('x')+'][y='+i+']').trigger('MobileSuggestedOver');
+                            }
+                            $('.puzzleSquare[x='+$(lEnd).attr('x')+'][y='+$(lEnd).attr('y')+']')
+                                .trigger('MobileTouch2');
                         }else{
                             console.log("Vertical hacia Arriba");
+                            for(var i=$(lStart).attr('y'); i>=$(lEnd).attr('y'); i--){
+                                // y descrease
+                                $('.puzzleSquare[x='+$(lStart).attr('x')+'][y='+i+']').trigger('MobileSuggestedOver');
+                            }
+                            $('.puzzleSquare[x='+$(lEnd).attr('x')+'][y='+$(lEnd).attr('y')+']')
+                                .trigger('MobileTouch2');
                         }
                     }
                     $('.selection-starts, .selection-ends').removeClass('selection-starts selection-ends');
