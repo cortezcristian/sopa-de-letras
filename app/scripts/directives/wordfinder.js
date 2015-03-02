@@ -9,12 +9,15 @@
 angular.module('sopaDeLetrasApp')
   .directive('wordfinder', function () {
     return {
-      template: '<div class="puzzle"></div><div class="words"></div>',
+      template: '<div class="puzzle"></div><div class="words"></div><a class="btn btn-default" ng-click="solve()">Resolver</a>',
       restrict: 'A',
       link: function postLink(scope, element, attrs) {
         var words = attrs.words.split(',');
         var gamePuzzle = wordfindgame.create(words, element.find('.puzzle'), element.find('.words'));
         
+        scope.solve = function(){
+            wordfindgame.solve(gamePuzzle, words);
+        } 
       }
     };
   });
