@@ -10,6 +10,6 @@ Sopa-de-letras is a wordfind Game. Demo Playroom here.
 # Implementation
 You can use the wordfinder as an angular directive
 
-```javascript
+```html
 <div wordfinder data-words="ciencia,piedad,consejo,corazon,valentia,sabiduria"></div>
 ```
