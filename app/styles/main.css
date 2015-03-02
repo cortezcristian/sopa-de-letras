@@ -90,10 +90,12 @@ body {
 * Styles for the puzzle
 */
 .puzzle {
-  border: 1px solid black;
   padding: 20px;
+  /*
+  border: 1px solid black;
   float: left;
-  margin: 10px 50px;
+  margin: 10px 20px;
+  */
 }
 
 .puzzle div {
@@ -147,7 +149,9 @@ button::-moz-focus-inner {
   -webkit-column-gap: 20px;
   column-count: 2;
   column-gap: 20px;
+  /*
   width: 300px;
+  */
 }
 
 .words ul {

@@ -18,6 +18,10 @@ angular.module('sopaDeLetrasApp')
         scope.solve = function(){
             wordfindgame.solve(gamePuzzle, words);
         } 
+
+        scope.start = function(){
+            gamePuzzle = wordfindgame.create(words, element.find('.puzzle'), element.find('.words'));
+        } 
       }
     };
   });
