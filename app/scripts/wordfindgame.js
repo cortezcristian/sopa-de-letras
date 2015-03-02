@@ -239,11 +239,12 @@ window.mobilecheck = function() {
     * @param {int} x2: The x coordinate of the second point
     * @param {int} y2: The y coordinate of the second point
     */
-    var calcOrientation = function (x1, y1, x2, y2) {
+    var calcOrientation = function (x1, y1, x2, y2, k) {
+      k = k || 1;
 
       for (var orientation in wordfind.orientations) {
         var nextFn = wordfind.orientations[orientation];
-        var nextPos = nextFn(x1, y1, 1);
+        var nextPos = nextFn(x1, y1, k);
 
         if (nextPos.x === x2 && nextPos.y === y2) {
           return orientation;
@@ -282,10 +283,93 @@ window.mobilecheck = function() {
           $('.puzzleSquare').on('MSPointerOver', select);
           $('.puzzleSquare').on('MSPointerUp', endTurn);
         }
-        else if(window.mobilecheck && !!('ontouchstart' in window)){
+        else if(1 || window.mobilecheck && !!('ontouchstart' in window)){
           // Touch divice
+          $('.puzzleSquare').on('MobileTouch1', startTurn);
+          $('.puzzleSquare').on('MobileSuggestedOver', select);
+          $('.puzzleSquare').on('MobileTouch2', endTurn);
           // http://stackoverflow.com/questions/11381673/detecting-a-mobile-browser
           // http://stackoverflow.com/questions/4817029/whats-the-best-way-to-detect-a-touch-screen-device-using-javascript
+          $('.puzzleSquare').on('click', function(){
+            if($('.selection-starts').size() > 0) {
+                $(this).addClass('selection-ends');
+                var diffBlocks = { x:0, y:0, dx:0, dy:0, distance: 0 };
+                diffBlocks.x = $(this).attr('x') - $(startSquare).attr('x');
+                diffBlocks.y = $(this).attr('y') - $(startSquare).attr('y');
+                
+
+                var failed = false;
+                var lStart = $('.selection-starts');
+                var lEnd = $('.selection-ends');
+
+                if(startSquare === this){
+                    //Same block; skip
+                    failed = true;
+                } else if(diffBlocks.x === 0 || diffBlocks.y === 0){
+                    // Horizontal / Vertical
+                    console.log("Horizontal / Vertical");
+                    diffBlocks.distance = (diffBlocks.x !== 0) ? diffBlocks.x : diffBlocks.y; 
+                    if(diffBlocks.x !== 0 ){
+                        console.log("Horizontal");
+                        if(diffBlocks.x > 0){
+                            console.log("Vertical hacia Der");
+                            for(var i=$(lStart).attr('x'); i<=$(lEnd).attr('x'); i++){
+                                // x incresase
+                                $('.puzzleSquare[x='+i+'][y='+$(lStart).attr('y')+']').trigger('MobileSuggestedOver');
+                            }
+                            $('.puzzleSquare[x='+$(lEnd).attr('x')+'][y='+$(lEnd).attr('y')+']')
+                                .trigger('MobileTouch2');
+                        }else{
+                            console.log("Vertical hacia Izq");
+                            for(var i=$(lStart).attr('x'); i>=$(lEnd).attr('x'); i--){
+                                // x decrease
+                                $('.puzzleSquare[x='+i+'][y='+$(lStart).attr('y')+']').trigger('MobileSuggestedOver');
+                            }
+                            $('.puzzleSquare[x='+$(lEnd).attr('x')+'][y='+$(lEnd).attr('y')+']')
+                                .trigger('MobileTouch2');
+                        }
+                    } else {
+                        console.log("Vertical");
+                        if(diffBlocks.y > 0){
+                            console.log("Vertical hacia Abajo");
+                        }else{
+                            console.log("Vertical hacia Arriba");
+                        }
+                    }
+                    $('.selection-starts, .selection-ends').removeClass('selection-starts selection-ends');
+
+                } else if(Math.abs(diffBlocks.x) === Math.abs(diffBlocks.y)){
+                    // Diagonal
+                    console.log("Diagonal");
+                    $('.selection-starts, .selection-ends').removeClass('selection-starts selection-ends');
+
+                } else {
+                    // None
+                    console.log("None");
+                    failed = true;
+                }
+
+                if(failed){
+                    $('.selection-starts, .selection-ends').removeClass('selection-starts selection-ends');
+                }
+                /*
+                var newOrientation = calcOrientation(
+                  $(startSquare).attr('x')-0,
+                  $(startSquare).attr('y')-0,
+                  $(this).attr('x')-0,
+                  $(this).attr('y')-0
+                  );
+                */
+            } else {
+                $(this).addClass('selection-starts');
+                $(this).trigger('MobileTouch1');
+                /*
+                startSquare = this;
+                selectedSquares.push(this);
+                curWord = $(this).text();
+                */
+            }
+          });
         }
         else {
           $('.puzzleSquare').mousedown(startTurn);

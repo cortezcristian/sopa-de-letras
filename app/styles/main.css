@@ -113,6 +113,8 @@ body {
   font: 1em sans-serif;
 }
 
+button:focus {outline:0 !important;}
+
 button::-moz-focus-inner {
   border: 0;
 }
@@ -120,6 +122,14 @@ button::-moz-focus-inner {
 /* indicates when a square has been selected */
 .puzzle .selected {
   background-color: orange;
+}
+
+.puzzle .selection-starts {
+  background-color: green;
+}
+
+.puzzle .selection-ends {
+  background-color: blue;
 }
 
 /* indicates that the square is part of a word that has been found */ 
