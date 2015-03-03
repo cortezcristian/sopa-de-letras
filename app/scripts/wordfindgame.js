@@ -283,7 +283,7 @@ window.mobilecheck = function() {
           $('.puzzleSquare').on('MSPointerOver', select);
           $('.puzzleSquare').on('MSPointerUp', endTurn);
         }
-        else if(1 || window.mobilecheck && !!('ontouchstart' in window)){
+        else if(window.mobilecheck && !!('ontouchstart' in window)){
           // Touch divice
           $('.puzzleSquare').on('MobileTouch1', startTurn);
           $('.puzzleSquare').on('MobileSuggestedOver', select);
