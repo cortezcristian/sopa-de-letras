@@ -1,5 +1,8 @@
 # Sopa-de-letras
-Sopa-de-letras is a wordfind Game. [See the Demo](http://cortezcristian.com/sopa-de-letras/#/).
+Sopa-de-letras is a wordfind Game. 
+
+- [See the Web Demo](http://cortezcristian.com/sopa-de-letras/#/).
+- [Downlaod as ChromeApp](https://chrome.google.com/webstore/detail/sopa-de-letras/iaacnmdhklagmfpdjelibinmpfndhikc)
 
 ![Screenshot](https://raw.githubusercontent.com/cortezcristian/sopa-de-letras/master/app/images/sopa-de-letras.png)
 
