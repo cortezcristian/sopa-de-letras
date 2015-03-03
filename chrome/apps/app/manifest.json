@@ -1,24 +1,24 @@
 {
-  	"name": "__MSG_appName__",
-  	"description": "__MSG_appDescription__",
-  	"version": "1",
-  	"manifest_version": 2,
-  	"default_locale": "en",
-  	"permissions": [
+    "name": "__MSG_appName__",
+    "description": "__MSG_appDescription__",
+    "version": "3",
+    "manifest_version": 2,
+    "default_locale": "en",
+    "permissions": [
         "fileSystem",
-  		"app.window",
-  		"<all_urls>"
-  	],
-  	"icons": {
-  		"32": "images/letters-32.png",
-  		"128": "images/letters-128.png"
-  	},
-  	"app": {
-  		"background": {
-  			"scripts": [
-  				"scripts/main.js",
-  				"scripts/chromereload.js"
-  			]
-  		}
-  	}
-  }
+        "app.window",
+        "<all_urls>"
+    ],
+    "icons": {
+        "32": "images/letters-32.png",
+        "128": "images/letters-128.png"
+    },
+    "app": {
+        "background": {
+            "scripts": [
+                "scripts/main.js",
+                "scripts/chromereload.js"
+            ]
+        }
+    }
+}
