@@ -125,7 +125,7 @@ button::-moz-focus-inner {
 }
 
 .puzzle .selection-starts {
-  background-color: green;
+  background-color: green !important;
 }
 
 .puzzle .selection-ends {

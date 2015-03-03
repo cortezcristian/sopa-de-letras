@@ -351,9 +351,50 @@ window.mobilecheck = function() {
                     $('.selection-starts, .selection-ends').removeClass('selection-starts selection-ends');
 
                 } else if(Math.abs(diffBlocks.x) === Math.abs(diffBlocks.y)){
+                    diffBlocks.distance = Math.abs(diffBlocks.x); 
                     // Diagonal
                     console.log("Diagonal");
+                    if(diffBlocks.y > 0) {
+                        console.log("Diagonal hacia abajo");
+                        if(diffBlocks.x > 0) {
+                            console.log("Diagonal hacia abajo a la Der");
+                            var x = parseInt($(lStart).attr('x'));
+                            var y = parseInt($(lStart).attr('y'));
+                            for(var i=0; i<=diffBlocks.distance; i++){
+                                // x increase, y increase
+                                $('.puzzleSquare[x='+(x+i)+'][y='+(y+i)+']').trigger('MobileSuggestedOver');
+                            }
+                        } else {
+                            console.log("Diagonal hacia abajo a la Izq");
+                            var x = parseInt($(lStart).attr('x'));
+                            var y = parseInt($(lStart).attr('y'));
+                            for(var i=0; i<=diffBlocks.distance; i++){
+                                // x decrease, y decrease
+                                $('.puzzleSquare[x='+(x-i)+'][y='+(y+i)+']').trigger('MobileSuggestedOver');
+                            }
+                        }
+                    }else{
+                        console.log("Diagonal hacia arriba");
+                        if(diffBlocks.x > 0) {
+                            console.log("Diagonal hacia arriba a la Der");
+                            var x = parseInt($(lStart).attr('x'));
+                            var y = parseInt($(lStart).attr('y'));
+                            for(var i=0; i<=diffBlocks.distance; i++){
+                                // x increase, y decrease
+                                $('.puzzleSquare[x='+(x+i)+'][y='+(y-i)+']').trigger('MobileSuggestedOver');
+                            }
+                        } else {
+                            console.log("Diagonal hacia arriba a la Izq");
+                            var x = parseInt($(lStart).attr('x'));
+                            var y = parseInt($(lStart).attr('y'));
+                            for(var i=0; i<=diffBlocks.distance; i++){
+                                // x decrease, y decrease
+                                $('.puzzleSquare[x='+(x-i)+'][y='+(y-i)+']').trigger('MobileSuggestedOver');
+                            }
+                        }
+                    }
                     $('.selection-starts, .selection-ends').removeClass('selection-starts selection-ends');
+                    $(this).trigger('MobileTouch2');
 
                 } else {
                     // None
@@ -363,6 +404,7 @@ window.mobilecheck = function() {
 
                 if(failed){
                     $('.selection-starts, .selection-ends').removeClass('selection-starts selection-ends');
+                    $(this).trigger('MobileTouch2');
                 }
                 /*
                 var newOrientation = calcOrientation(
