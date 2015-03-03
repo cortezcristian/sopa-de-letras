@@ -10,7 +10,7 @@
   		"<all_urls>"
   	],
   	"icons": {
-  		"16": "images/letters-32.png",
+  		"32": "images/letters-32.png",
   		"128": "images/letters-128.png"
   	},
   	"app": {
