@@ -5,7 +5,7 @@
   	"manifest_version": 2,
   	"default_locale": "en",
   	"permissions": [
-  		"app.runtime",
+        "fileSystem",
   		"app.window",
   		"<all_urls>"
   	],
