@@ -203,6 +203,27 @@ var wordsDic = [
 'line'
 ];
 
+var getRandomWords = function(){
+            
+   var  limit = 10,
+        lower_bound = 0,
+        upper_bound = 199,
+        unique_random_numbers = [],
+        unique_random_words = [];
+
+    while (unique_random_numbers.length < limit) {
+        var random_number = Math.round(Math.random()*(upper_bound - lower_bound) + lower_bound);
+        if (unique_random_numbers.indexOf(random_number) == -1) { 
+            // Yay! new random number
+            unique_random_numbers.push( random_number );
+            unique_random_words.push( wordsDic[random_number] );
+        }
+    }
+
+    return unique_random_words;
+    
+}
+
 /**
  * @ngdoc directive
  * @name sopaDeLetrasApp.directive:wordfinder
@@ -217,6 +238,7 @@ angular.module('sopaDeLetrasApp')
       link: function postLink(scope, element, attrs) {
         var words = attrs.words.split(',');
         var gamePuzzle = wordfindgame.create(words, element.find('.puzzle'), element.find('.words'));
+
         
         scope.solve = function(){
             wordfindgame.solve(gamePuzzle, words);
