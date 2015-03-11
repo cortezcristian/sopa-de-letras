@@ -2,6 +2,7 @@
 body {
   padding-top: 20px;
   padding-bottom: 20px;
+  background: url("../images/background.png") repeat-y 50% 0;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */

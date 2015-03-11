@@ -236,7 +236,8 @@ angular.module('sopaDeLetrasApp')
       restrict: 'A',
       templateUrl: './views/wordfinder.html',
       link: function postLink(scope, element, attrs) {
-        var words = attrs.words.split(',');
+        //var words = attrs.words.split(',');
+        var words = getRandomWords();
         var gamePuzzle = wordfindgame.create(words, element.find('.puzzle'), element.find('.words'));
 
         
