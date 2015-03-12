@@ -169,6 +169,7 @@ body .header, body .footer, body .jumbotron {
   font: 1em sans-serif;
   border-radius: 2px;
   margin: 1px;
+  font-weight: bolder !important;
 }
 
 button:focus {outline:0 !important;}
@@ -182,8 +183,18 @@ button::-moz-focus-inner {
   background-color: orange;
 }
 
+/*
+@-webkit-keyframes blink { 50% { visibility: hidden; }}
+        @keyframes blink { 50% { visibility: hidden; }}
+*/
+
 .puzzle .selection-starts {
   background-color: green !important;
+  color: #fff !important;
+  /*
+  -webkit-animation: blink 1s step-end infinite;
+  animation: blink 1s step-end infinite;
+  */
 }
 
 .puzzle .selection-ends {
@@ -265,6 +276,10 @@ button::-moz-focus-inner {
 
 /* Extra Small Devices, Phones */ 
 @media only screen and (min-width : 480px) {
+    .puzzle .puzzleSquare {
+        font-weight: bolder !important;
+    }
+
     .center-pills li a {
         padding: 5px;
         font-size: 12px;
@@ -276,11 +291,21 @@ button::-moz-focus-inner {
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
+    .puzzle .puzzleSquare {
+        font-weight: bolder !important;
+        height: 44px;
+        width: 44px;
+    }
 
 }
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {
+    .puzzle .puzzleSquare {
+        font-weight: bolder !important;
+        height: 44px;
+        width: 44px;
+    }
 
 }
 
