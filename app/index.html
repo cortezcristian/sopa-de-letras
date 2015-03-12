@@ -29,10 +29,10 @@
       <div class="header row">
         <div class="col-sm-6 col-sm-offset-3 game-menu">
             <ul class="nav nav-pills center-pills">
-              <li class="active"><a href="" ng-click="start()">Play / Restart</a></li>
-              <li class="active"><a href="" ng-click="togglewords()">{{(showwords)?'Hide':'Show'}} Words</a></li>
-              <li class="active"><a href="" data-toggle="modal" data-target="#howtoplayModal">How To Play</a></li>
-              <li class="active"><a href="" ng-click="solve()">Give Up</a></li>
+              <li class="active"><a href="" ng-click="start()">{{menu.playOrRestart}}</a></li>
+              <li class="active"><a href="" ng-click="togglewords()">{{menu.toggleWords}}</a></li>
+              <li class="active"><a href="" data-toggle="modal" data-target="#howtoplayModal">{{menu.howToPlay}}</a></li>
+              <li class="active"><a href="" ng-click="solve()">{{menu.resolveIt}}</a></li>
             </ul>
         </div>
       </div>
@@ -55,17 +55,19 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="howtoplayModalLabel">How to play?</h4>
+        <h4 class="modal-title" id="howtoplayModalLabel">{{menu.modalHowTo.title}}</h4>
       </div>
       <div class="modal-body game-howto-con">
         <p style="text-align:center;">
-        Just hit the first letter and the last:
+        {{menu.modalHowTo.explainTop}}
         <br />
         <img src="./images/how-to-play.gif" alt="how to" class="game-howto-img" />
+        <br />
+        {{menu.modalHowTo.explainBottom}}
         </p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">{{menu.modalHowTo.closeButton}}</button>
       </div>
     </div>
   </div>

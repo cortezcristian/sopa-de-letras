@@ -13,6 +13,7 @@ angular.module('sopaDeLetrasApp')
       templateUrl: './views/wordfinder.html',
       controller: function($rootScope){
         $rootScope.showwords = false; 
+        $rootScope.menu = menu; 
 
         $rootScope.solve = function(){
             wordfindgame.solve(gamePuzzle, words);
