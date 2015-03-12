@@ -238,8 +238,14 @@ angular.module('sopaDeLetrasApp')
       restrict: 'A',
       templateUrl: './views/wordfinder.html',
       controller: function($rootScope){
+        $rootScope.showwords = false; 
+
         $rootScope.solve = function(){
             wordfindgame.solve(gamePuzzle, words);
+        } 
+
+        $rootScope.togglewords = function(){
+            $rootScope.showwords = !$rootScope.showwords; 
         } 
 
         $rootScope.start = function(){

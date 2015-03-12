@@ -171,7 +171,7 @@ button::-moz-focus-inner {
 * Styles for the word list
 */
 .words {
-  padding-top: 20px;
+  padding: 10px 0;
   -moz-column-count: 2;
   -moz-column-gap: 20px;
   -webkit-column-count: 2;
@@ -181,10 +181,15 @@ button::-moz-focus-inner {
   /*
   width: 300px;
   */
+  background: #000;
+  color: white;
+  border-radius: 20px;
+  opacity: 0.9;
 }
 
 .words ul {
   list-style-type: none;
+  padding: 0;
 }
 
 .words li {
