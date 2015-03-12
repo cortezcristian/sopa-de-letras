@@ -86,7 +86,7 @@ body .header, body .footer, body .jumbotron {
 
 .brand-img {
     position: fixed;
-    bottom: 20px;
+    bottom: 15%;
     right: 30px;
     z-index: 1;
 }
@@ -210,4 +210,35 @@ button::-moz-focus-inner {
 .words .wordFound {
   text-decoration: line-through;
   color: gray;
+}
+
+/*==================================================
+=            Bootstrap 3 Media Queries             =
+==================================================*/
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) {
+        
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
 }
