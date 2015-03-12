@@ -96,7 +96,7 @@ var wordsDic = [
 'where',
 'much',
 'should',
-'well',
+'welcome',
 'people',
 'down',
 'own',
@@ -224,6 +224,8 @@ var getRandomWords = function(){
     
 }
 
+var words, options, gamePuzzle, wordfindelement;
+
 /**
  * @ngdoc directive
  * @name sopaDeLetrasApp.directive:wordfinder
@@ -235,20 +237,25 @@ angular.module('sopaDeLetrasApp')
     return {
       restrict: 'A',
       templateUrl: './views/wordfinder.html',
-      link: function postLink(scope, element, attrs) {
-        //var words = attrs.words.split(',');
-        var words = getRandomWords();
-        var options = {height:8, width:8};
-        var gamePuzzle = wordfindgame.create(words, element.find('.puzzle'), element.find('.words'), options);
-
-        
-        scope.solve = function(){
+      controller: function($rootScope){
+        $rootScope.solve = function(){
             wordfindgame.solve(gamePuzzle, words);
         } 
 
-        scope.start = function(){
-            gamePuzzle = wordfindgame.create(words, element.find('.puzzle'), element.find('.words'), options);
+        $rootScope.start = function(){
+            words = getRandomWords();
+            options = {height:8, width:8};
+            gamePuzzle = wordfindgame.create(words, wordfindelement.find('.puzzle'), wordfindelement.find('.words'), options);
         } 
+      },
+      link: function postLink(scope, element, attrs) {
+        //var words = attrs.words.split(',');
+        wordfindelement = element;
+        words = getRandomWords();
+        options = {height:8, width:8};
+        gamePuzzle = wordfindgame.create(words, element.find('.puzzle'), element.find('.words'), options);
+
+        
       }
     };
   });
