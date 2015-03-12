@@ -38,7 +38,7 @@
         <div class="col-sm-6 col-sm-offset-3 game-menu">
             <ul class="nav nav-pills center-pills">
               <li class="active"><a href="" ng-click="start()">Play / Restart</a></li>
-              <li class="active"><a href="" ng-click="togglewords()">Show Words</a></li>
+              <li class="active"><a href="" ng-click="togglewords()">{{(showwords)?'Hide':'Show'}} Words</a></li>
               <li class="active"><a href="" data-toggle="modal" data-target="#howtoplayModal">How To Play</a></li>
               <li class="active"><a href="" ng-click="solve()">Resolve</a></li>
             </ul>
@@ -66,11 +66,11 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="howtoplayModalLabel">How to play?</h4>
       </div>
-      <div class="modal-body">
+      <div class="modal-body game-howto-con">
         <p style="text-align:center;">
         Just hit the first letter and the last:
         <br />
-        <img src="./images/howto.gif" alt="how to" />
+        <img src="./images/howto.gif" alt="how to" class="game-howto-img" />
         </p>
       </div>
       <div class="modal-footer">

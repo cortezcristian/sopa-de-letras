@@ -103,6 +103,15 @@ body .header, body .footer, body .jumbotron {
     z-index: 6;
 }
 
+.game-howto-con {
+    background: #000;
+    color: #fff;
+}
+
+.game-howto-img {
+    width: 280px;
+}
+
 /**
 * Wordfind.js 0.0.1
 * (c) 2012 Bill, BunKat LLC.
@@ -204,7 +213,7 @@ button::-moz-focus-inner {
 
 .words li {
   padding: 3px 0;
-  font: 1em sans-serif;
+  /* font: 1em sans-serif; */
 }
 
 /* indicates that the word has been found */
