@@ -276,6 +276,7 @@ window.mobilecheck = function() {
         drawPuzzle(puzzleEl, puzzle);
         drawWords(wordsEl, wordList);
 
+        /*
         // attach events to the buttons
         // optimistically add events for windows 8 touch
         if (window.navigator.msPointerEnabled) {
@@ -284,6 +285,7 @@ window.mobilecheck = function() {
           $('.puzzleSquare').on('MSPointerUp', endTurn);
         }
         else if(window.mobilecheck && !!('ontouchstart' in window)){
+        */
           // Touch divice
           $('.puzzleSquare').on('MobileTouch1', startTurn);
           $('.puzzleSquare').on('MobileSuggestedOver', select);
@@ -417,19 +419,19 @@ window.mobilecheck = function() {
             } else {
                 $(this).addClass('selection-starts');
                 $(this).trigger('MobileTouch1');
-                /*
-                startSquare = this;
-                selectedSquares.push(this);
-                curWord = $(this).text();
-                */
+                // startSquare = this;
+                // selectedSquares.push(this);
+                // curWord = $(this).text();
             }
           });
+        /*
         }
         else {
           $('.puzzleSquare').mousedown(startTurn);
           $('.puzzleSquare').mouseenter(select);
           $('.puzzleSquare').mouseup(endTurn);
         }
+        */
 
         return puzzle;
       },
