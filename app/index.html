@@ -32,7 +32,7 @@
               <li class="active"><a href="" ng-click="start()">Play / Restart</a></li>
               <li class="active"><a href="" ng-click="togglewords()">{{(showwords)?'Hide':'Show'}} Words</a></li>
               <li class="active"><a href="" data-toggle="modal" data-target="#howtoplayModal">How To Play</a></li>
-              <li class="active"><a href="" ng-click="solve()">Resolve</a></li>
+              <li class="active"><a href="" ng-click="solve()">Give Up</a></li>
             </ul>
         </div>
       </div>
@@ -103,6 +103,9 @@
     <script src="bower_components/angular-route/angular-route.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
+    
+        <!-- prevent settings minification -->
+        <script src="scripts/settings.js"></script>
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/wordfind.js"></script>
