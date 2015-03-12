@@ -1,9 +1,13 @@
 /* Space out content a bit */
 body {
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 0;
+  margin-bottom: 0px;
   background: url("../images/background.png") repeat-y 50% 0;
+  /* 
   overflow-x: hidden;
+  min-height: 100%;
+  */
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -110,6 +114,23 @@ body .header, body .footer, body .jumbotron {
 
 .game-howto-img {
     width: 280px;
+}
+
+.friends-pic-bottom {
+    padding: 0;
+    /*
+    margin-bottom: -10px;
+    */
+    position: fixed;
+    bottom: 0;
+    width: 98%;
+    z-index:10;
+}
+.friends-pic-bottom img {
+}
+
+.container-fluid {
+    overflow-x:hidden;
 }
 
 /**
