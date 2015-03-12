@@ -106,7 +106,8 @@ body .header, body .footer, body .jumbotron {
 * Styles for the puzzle
 */
 .puzzle {
-  padding: 20px;
+  padding: 10px 0;
+  min-width: 360px;
   /*
   border: 1px solid black;
   float: left;
