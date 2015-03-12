@@ -238,7 +238,8 @@ angular.module('sopaDeLetrasApp')
       link: function postLink(scope, element, attrs) {
         //var words = attrs.words.split(',');
         var words = getRandomWords();
-        var gamePuzzle = wordfindgame.create(words, element.find('.puzzle'), element.find('.words'));
+        var options = {height:8, width:8};
+        var gamePuzzle = wordfindgame.create(words, element.find('.puzzle'), element.find('.words'), options);
 
         
         scope.solve = function(){
@@ -246,7 +247,7 @@ angular.module('sopaDeLetrasApp')
         } 
 
         scope.start = function(){
-            gamePuzzle = wordfindgame.create(words, element.find('.puzzle'), element.find('.words'));
+            gamePuzzle = wordfindgame.create(words, element.find('.puzzle'), element.find('.words'), options);
         } 
       }
     };

@@ -79,6 +79,21 @@ body {
   }
 }
 
+body .header, body .footer, body .jumbotron {
+    border: 0 !important;    
+}
+
+.center-pills {
+    display: flex;
+    justify-content: center;
+}
+
+.game-menu {
+    background: #221e1f;
+    padding: 5px;
+    border-radius: 20px;
+}
+
 /**
 * Wordfind.js 0.0.1
 * (c) 2012 Bill, BunKat LLC.
@@ -106,12 +121,14 @@ body {
 
 /* style for each square in the puzzle */
 .puzzle .puzzleSquare {
-  height: 30px;
-  width: 30px;
+  height: 36px;
+  width: 36px;
   text-transform: uppercase;
   background-color: white;
   border: 0;
   font: 1em sans-serif;
+  border-radius: 2px;
+  margin: 1px;
 }
 
 button:focus {outline:0 !important;}

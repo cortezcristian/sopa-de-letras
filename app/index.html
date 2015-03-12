@@ -33,18 +33,20 @@
     http://teacherjoe.us/Vocab200.html
     - Generate random number 0 and 200
      -->
-    <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a ng-href="#">Jugar</a></li>
-        </ul>
+    <div class="container-fluid">
+      <div class="header row">
+        <div class="col-sm-6 col-sm-offset-3 game-menu">
+            <ul class="nav nav-pills center-pills">
+              <li class="active"><a href="javascript:;" ng-click="start()">Play / Restart</a></li>
+              <li class="active"><a href="javascript:;">Show Words</a></li>
+              <li class="active"><a href="javascript:;">How To Play</a></li>
+              <li class="active"><a href="javascript:;" ng-click="solve()">Resolve</a></li>
+            </ul>
+        </div>
       </div>
 
-      <div ng-view=""></div>
+      <div class="row" ng-view=""></div>
 
-      <div class="footer">
-        <p><span class="glyphicon glyphicon-heart"></span> @cortezcristian</p>
-      </div>
     </div>
 
 
