@@ -38,11 +38,25 @@ body {
 }
 
 .wf-menu-side {
-    width: 230px;
     position: fixed;
-    top: 160px;
+    top: 240px;
     left: 20px;
 }
+
+.wf-menu-side li a {
+    margin: 2px;
+    width: 136px;
+    height: 44px;
+    background: transparent url("../images/nav-background.png") no-repeat 0 0;
+    text-align: center;
+    color: #293108;
+}
+
+.wf-menu-side li a:hover {
+    background-color: transparent;
+    opacity: 0.9;
+}
+
 
 /* Customize container */
 @media (min-width: 768px) {
@@ -229,8 +243,8 @@ button::-moz-focus-inner {
 * Styles for the word list
 */
 .words {
-  padding: 10px 0;
   /*
+  padding: 10px 0;
   -moz-column-count: 2;
   -moz-column-gap: 20px;
   -webkit-column-count: 2;
@@ -244,13 +258,13 @@ button::-moz-focus-inner {
   border-radius: 2px;
   opacity: 0.9;
   position: fixed;
-  top: 160px;
+  top: 200px;
   right: 20px;
 }
 
 .words ul {
   list-style-type: none;
-  padding: 20px;
+  padding: 20px 20px 5px 20px;
   width: 200px;
 }
 

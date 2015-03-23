@@ -12,7 +12,7 @@ angular.module('sopaDeLetrasApp')
       restrict: 'A',
       templateUrl: './views/wordfinder.html',
       controller: function($rootScope){
-        $rootScope.showwords = false; 
+        $rootScope.showwords = menu.showWords || false; 
         $rootScope.menu = menu; 
 
         $rootScope.solve = function(){
@@ -25,7 +25,7 @@ angular.module('sopaDeLetrasApp')
 
         $rootScope.start = function(){
             words = getRandomWords();
-            options = {height:8, width:8};
+            //options = {height:8, width:8};
             gamePuzzle = wordfindgame.create(words, wordfindelement.find('.puzzle'), wordfindelement.find('.words'), options);
         } 
       },
@@ -33,7 +33,7 @@ angular.module('sopaDeLetrasApp')
         //var words = attrs.words.split(',');
         wordfindelement = element;
         words = getRandomWords();
-        options = {height:8, width:8};
+        //options = {height:8, width:8};
         gamePuzzle = wordfindgame.create(words, element.find('.puzzle'), element.find('.words'), options);
 
         
