@@ -3,7 +3,7 @@ body {
   padding-top: 20px;
   padding-bottom: 0;
   margin-bottom: 0px;
-  background: url("../images/background.png") repeat-y 50% 0;
+  background: #231f20 url("../images/background-new.png") no-repeat 50% 0;
   /* 
   overflow-x: hidden;
   min-height: 100%;
@@ -35,6 +35,13 @@ body {
   padding-top: 19px;
   color: #777;
   border-top: 1px solid #e5e5e5;
+}
+
+.wf-menu-side {
+    width: 230px;
+    position: fixed;
+    top: 120px;
+    left: 20px;
 }
 
 /* Customize container */

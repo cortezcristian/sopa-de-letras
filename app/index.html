@@ -26,9 +26,10 @@
     - Play: 2 clicks
      -->
     <div class="container-fluid">
+      <!--
       <div class="header row">
         <div class="col-sm-6 col-sm-offset-3 game-menu">
-            <ul class="nav nav-pills center-pills">
+            <ul class="nav">
               <li class="active"><a href="" ng-click="start()">{{menu.playOrRestart}}</a></li>
               <li class="active"><a href="" ng-click="togglewords()">{{menu.toggleWords}}</a></li>
               <li class="active"><a href="" data-toggle="modal" data-target="#howtoplayModal">{{menu.howToPlay}}</a></li>
@@ -36,9 +37,19 @@
             </ul>
         </div>
       </div>
+      -->
 
-      <div class="row" ng-view=""></div>
+      <div class="row" style="margin-top: 120px;" ng-view=""></div>
 
+      <div class="row">
+        <ul class="nav wf-menu-side">
+          <li class="active"><a href="" ng-click="start()">{{menu.playOrRestart}}</a></li>
+          <li class="active"><a href="" ng-click="togglewords()">{{menu.toggleWords}}</a></li>
+          <li class="active"><a href="" data-toggle="modal" data-target="#howtoplayModal">{{menu.howToPlay}}</a></li>
+          <li class="active"><a href="" ng-click="solve()">{{menu.resolveIt}}</a></li>
+        </ul>
+      </div>
+      <!--
       <div class="row">
         <div style="text-align: center;" class="col-sm-12 friends-pic-bottom">
             <img src="./images/characters.png" alt="friends" class="img-responsive" style="display: inline-block;" />
@@ -48,6 +59,7 @@
       <div class="row">
         <img src="./images/friends.png" alt="friends" class="img-responsive brand-img" />
       </div>
+      -->
 
 
     <div class="modal fade" id="howtoplayModal" tabindex="-1" role="dialog" aria-labelledby="howtoplayModalLabel" aria-hidden="true">
