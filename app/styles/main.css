@@ -40,7 +40,7 @@ body {
 .wf-menu-side {
     width: 230px;
     position: fixed;
-    top: 120px;
+    top: 160px;
     left: 20px;
 }
 
@@ -230,35 +230,41 @@ button::-moz-focus-inner {
 */
 .words {
   padding: 10px 0;
+  /*
   -moz-column-count: 2;
   -moz-column-gap: 20px;
   -webkit-column-count: 2;
   -webkit-column-gap: 20px;
   column-count: 2;
   column-gap: 20px;
-  /*
   width: 300px;
   */
-  background: #000;
+  background: #d0eb6a;
   color: white;
-  border-radius: 20px;
+  border-radius: 2px;
   opacity: 0.9;
+  position: fixed;
+  top: 160px;
+  right: 20px;
 }
 
 .words ul {
   list-style-type: none;
-  padding: 0;
+  padding: 20px;
+  width: 200px;
 }
 
 .words li {
   padding: 3px 0;
   /* font: 1em sans-serif; */
+  text-transform: uppercase;
+  color: #000;
 }
 
 /* indicates that the word has been found */
 .words .wordFound {
   text-decoration: line-through;
-  color: gray;
+  color: #070805;
 }
 
 /*==================================================
