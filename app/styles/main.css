@@ -38,9 +38,17 @@ body {
 }
 
 .wf-menu-side {
+    /*
     position: fixed;
     top: 240px;
     left: 20px;
+    */
+    width: 560px;
+    margin: 0 auto;
+}
+
+.wf-menu-side li {
+    float: left;
 }
 
 .wf-menu-side li a {
@@ -187,7 +195,8 @@ body .header, body .footer, body .jumbotron {
   text-transform: uppercase;
   background-color: white;
   border: 0;
-  font: 1em sans-serif;
+  /*font: 1em sans-serif;*/
+  font-size: 19px;
   border-radius: 2px;
   margin: 1px;
   font-weight: bolder !important;

@@ -26,10 +26,9 @@
     - Play: 2 clicks
      -->
     <div class="container-fluid">
-      <!--
       <div class="header row">
-        <div class="col-sm-6 col-sm-offset-3 game-menu">
-            <ul class="nav">
+        <div class="col-sm-6 col-sm-offset-3"  style="margin-top: 50px;">
+            <ul class="nav wf-menu-side">
               <li class="active"><a href="" ng-click="start()">{{menu.playOrRestart}}</a></li>
               <li class="active"><a href="" ng-click="togglewords()">{{menu.toggleWords}}</a></li>
               <li class="active"><a href="" data-toggle="modal" data-target="#howtoplayModal">{{menu.howToPlay}}</a></li>
@@ -37,10 +36,10 @@
             </ul>
         </div>
       </div>
-      -->
 
-      <div class="row" style="margin-top: 120px;" ng-view=""></div>
+      <div class="row" style="margin-top: 70px;" ng-view=""></div>
 
+      <!--
       <div class="row">
         <ul class="nav wf-menu-side">
           <li class="active"><a href="" ng-click="start()">{{menu.playOrRestart}}</a></li>
@@ -49,6 +48,8 @@
           <li class="active"><a href="" ng-click="solve()">{{menu.resolveIt}}</a></li>
         </ul>
       </div>
+      -->
+
       <!--
       <div class="row">
         <div style="text-align: center;" class="col-sm-12 friends-pic-bottom">
