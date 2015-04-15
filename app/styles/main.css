@@ -1,4 +1,13 @@
 /* Space out content a bit */
+@font-face {
+    font-family: soupfont;
+    src: url(DINNextLTPro-Medium.ttf);
+}
+
+body * {
+    font-family: soupfont;
+}
+
 body {
   padding-top: 20px;
   padding-bottom: 0;
@@ -53,6 +62,7 @@ body {
 
 .wf-menu-side li a {
     margin: 2px;
+    padding-top: 13px;
     width: 136px;
     height: 44px;
     background: transparent url("../images/nav-background.png") no-repeat 0 0;
