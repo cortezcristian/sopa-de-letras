@@ -52,14 +52,14 @@ body {
     top: 240px;
     left: 20px;
     */
-    width: 100%;
+    width: 281px;
     margin: 0 auto;
 }
 
 .wf-menu-side li {
   float: left;
-  width: 50%;
   margin: 0 auto;
+  padding: 0 2px;
 }
 
 .wf-menu-side li a {
@@ -68,7 +68,7 @@ body {
     width: 136px;
     height: 44px;
     /*background: transparent url("../images/nav-background.png") no-repeat 0 0;*/
-    background: red url("../images/nav-background.png") no-repeat center center;
+    background: transparent url("../images/nav-background.png") no-repeat center center;
     text-align: center;
     color: #293108;
 }
