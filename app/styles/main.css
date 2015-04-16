@@ -311,6 +311,12 @@ button::-moz-focus-inner {
 .jumbotron{
   margin-bottom: 0;
 }
+.lead{
+  margin-bottom: 20px;
+  font-size: inherit;
+  font-weight: normal;
+  line-height: inherit; 
+}
 
 /*==================================================
 =            Bootstrap 3 Media Queries             =
