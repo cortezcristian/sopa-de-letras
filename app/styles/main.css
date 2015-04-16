@@ -52,20 +52,23 @@ body {
     top: 240px;
     left: 20px;
     */
-    width: 560px;
+    width: 100%;
     margin: 0 auto;
 }
 
 .wf-menu-side li {
-    float: left;
+  float: left;
+  width: 50%;
+  margin: 0 auto;
 }
 
 .wf-menu-side li a {
-    margin: 2px;
+    margin: 2px auto;
     padding-top: 13px;
     width: 136px;
     height: 44px;
-    background: transparent url("../images/nav-background.png") no-repeat 0 0;
+    /*background: transparent url("../images/nav-background.png") no-repeat 0 0;*/
+    background: red url("../images/nav-background.png") no-repeat center center;
     text-align: center;
     color: #293108;
 }
@@ -341,6 +344,14 @@ button::-moz-focus-inner {
         font-weight: bolder !important;
         height: 44px;
         width: 44px;
+    }
+  
+    .wf-menu-side{
+      width: 600px;
+    }
+  
+    .wf-menu-side li{
+      width: 145px;
     }
 
 }
