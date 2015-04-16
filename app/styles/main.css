@@ -279,15 +279,17 @@ button::-moz-focus-inner {
   color: white;
   border-radius: 2px;
   opacity: 0.9;
-  position: fixed;
   top: 200px;
   right: 20px;
+  min-height: 160px;
 }
 
 .words ul {
   list-style-type: none;
   padding: 20px 20px 5px 20px;
   width: 200px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .words li {
@@ -295,12 +297,19 @@ button::-moz-focus-inner {
   /* font: 1em sans-serif; */
   text-transform: uppercase;
   color: #000;
+  width: 50%;
+  float: left;
 }
 
 /* indicates that the word has been found */
 .words .wordFound {
   text-decoration: line-through;
   color: #070805;
+}
+
+/* redefinig bootstrap clases */
+.jumbotron{
+  margin-bottom: 0;
 }
 
 /*==================================================
@@ -352,6 +361,14 @@ button::-moz-focus-inner {
   
     .wf-menu-side li{
       width: 145px;
+    }
+  
+    .words{
+      position: fixed;
+      width: 200px;
+    }
+    .words li{
+      width: 100%;
     }
 
 }
