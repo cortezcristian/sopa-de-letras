@@ -1,10 +1,10 @@
-<!doctype html> <html class="no-js"> <head> <meta charset="utf-8"> <title>Wordfind Puzzle</title> <meta name="description" content=""> <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"> <!-- Place favicon.ico and apple-touch-icon.png in the root directory --> <link rel="stylesheet" href="styles/vendor.20833e0b.css"> <link rel="stylesheet" href="styles/main.7fe0ac39.css">  <body ng-app="sopaDeLetrasApp"> <!--[if lt IE 7]>
+<!doctype html> <html class="no-js"> <head> <meta charset="utf-8"> <title>Wordfind Puzzle</title> <meta name="description" content=""> <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"> <!-- Place favicon.ico and apple-touch-icon.png in the root directory --> <link rel="stylesheet" href="styles/vendor.20833e0b.css"> <link rel="stylesheet" href="styles/main.6ebfab1f.css">  <body ng-app="sopaDeLetrasApp"> <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]--> <!-- 
     - Top Menu
     - How to play modal
     - Play: 2 clicks
-     --> <div class="container-fluid"> <div class="header row"> <div class="col-sm-6 col-sm-offset-3" style="margin-top: 50px"> <ul class="nav wf-menu-side"> <li class="active"><a href="" ng-click="start()">{{menu.playOrRestart}}</a></li> <li class="active"><a href="" ng-click="togglewords()">{{menu.toggleWords}}</a></li> <li class="active"><a href="" data-toggle="modal" data-target="#howtoplayModal">{{menu.howToPlay}}</a></li> <li class="active"><a href="" ng-click="solve()">{{menu.resolveIt}}</a></li> </ul> </div> </div> <div class="row" style="margin-top: 70px" ng-view=""></div> <!--
+     --> <div class="container-fluid"> <div class="header row"> <div style="margin-top: 50px"> <ul class="nav wf-menu-side"> <li class="active"><a href="" ng-click="start()">{{menu.playOrRestart}}</a></li> <li class="active"><a href="" ng-click="togglewords()">{{menu.toggleWords}}</a></li> <li class="active"><a href="" data-toggle="modal" data-target="#howtoplayModal">{{menu.howToPlay}}</a></li> <li class="active"><a href="" ng-click="solve()">{{menu.resolveIt}}</a></li> </ul> </div> </div> <div class="row" style="margin-top: 70px" ng-view=""></div> <!--
       <div class="row">
         <ul class="nav wf-menu-side">
           <li class="active"><a href="" ng-click="start()">{{menu.playOrRestart}}</a></li>
