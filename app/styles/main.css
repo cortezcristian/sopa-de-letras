@@ -208,6 +208,7 @@ body .header, body .footer, body .jumbotron {
   text-transform: uppercase;
   background-color: white;
   border: 0;
+  padding: 0;
   /*font: 1em sans-serif;*/
   font-size: 19px;
   border-radius: 2px;
