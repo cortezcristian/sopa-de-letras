@@ -206,19 +206,24 @@ window.mobilecheck = function() {
     * resets the game state to start a new word.
     *
     */
+	
+	var myClassIterator=0;
     var endTurn = function () {
 
       // see if we formed a valid word
       for (var i = 0, len = wordList.length; i < len; i++) {
         
         if (wordList[i] === curWord) {
-          $('.selected').addClass('found');
+          $('.selected').addClass('found'+myClassIterator);
+		  myClassIterator++;
+		  myClassIterator%=10;
           wordList.splice(i,1);
           $('.' + curWord).addClass('wordFound');
         }
 
         if (wordList.length === 0) {
           $('.puzzleSquare').addClass('complete');
+          $('#playAgainModal').modal();
         }
       }
 

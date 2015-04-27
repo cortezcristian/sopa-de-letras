@@ -246,5 +246,11 @@ menu.modalHowTo.title = "How to play?";
 menu.modalHowTo.explainTop = "Just hit the first letter and the last:";
 menu.modalHowTo.explainBottom = "";
 menu.modalHowTo.closeButton = "Close"; // idea: change this to I get it
+menu.modalPlayAgain = {};
+menu.modalPlayAgain.title = "You win!";
+menu.modalPlayAgain.explainTop = "Play again?";
+menu.modalPlayAgain.explainBottom = "";
+menu.modalPlayAgain.closeButton = "No";
+menu.modalPlayAgain.okButton = "Yes";
 menu.showWords = true;
 
