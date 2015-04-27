@@ -31,7 +31,7 @@
             <ul class="nav wf-menu-side">
               <li class="active"><a href="" ng-click="start()">{{menu.playOrRestart}}</a></li>
               <li class="active"><a href="" ng-click="togglewords()">{{menu.toggleWords}}</a></li>
-              <li class="active"><a href="" data-toggle="modal" data-target="#howtoplayModal">{{menu.howToPlay}}</a></li>
+              <li class="active"><a href="" data-toggle="modal" data-target="#playAgainModal">{{menu.howToPlay}}</a></li>
               <li class="active"><a href="" ng-click="solve()">{{menu.resolveIt}}</a></li>
             </ul>
         </div>
@@ -85,7 +85,26 @@
     </div>
   </div>
 
-    </div> <!-- end 2nd cf -->
+    </div>  <!-- end 2nd cf -->
+      
+    <div class="modal fade" id="playAgainModal" tabindex="-1" role="dialog" aria-labelledby="playAgainModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="playAgainModalLabel">{{menu.modalPlayAgain.title}}</h4>
+      </div>
+      <div class="modal-body game-howto-con">
+        <p style="text-align:center;">{{menu.modalPlayAgain.explainTop}}</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">{{menu.modalPlayAgain.closeButton}}</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="start()">{{menu.modalPlayAgain.okButton}}</button>
+      </div>
+    </div>
+  </div>
+
+    </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>

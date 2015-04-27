@@ -223,6 +223,7 @@ window.mobilecheck = function() {
 
         if (wordList.length === 0) {
           $('.puzzleSquare').addClass('complete');
+          $('#playAgainModal').modal();
         }
       }
 
