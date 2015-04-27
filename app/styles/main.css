@@ -67,14 +67,14 @@ body {
     padding-top: 13px;
     width: 136px;
     height: 44px;
+    /*background: transparent url("../images/nav-background.png") no-repeat 0 0;*/
+    background: transparent url("../images/nav-background.png") no-repeat center center;
     text-align: center;
-    color: #FFFFFF;
-    background-color: rgb(170,196,16);
-    border-radius: 5px;
+    color: #293108;
 }
 
 .wf-menu-side li a:hover {
-    background-color: rgb(160,186,6);
+    background-color: transparent;
     opacity: 0.9;
 }
 
@@ -233,7 +233,7 @@ button::-moz-focus-inner {
 */
 
 .puzzle .selection-starts {
-  background-color: #B6DC1F !important;
+  background-color: green !important;
   color: #fff !important;
   /*
   -webkit-animation: blink 1s step-end infinite;
@@ -246,53 +246,8 @@ button::-moz-focus-inner {
 }
 
 /* indicates that the square is part of a word that has been found */ 
-.puzzle .found0 {
+.puzzle .found {
   background-color: #d0eb6a;
-  color: #000;
-  border-radius: 2px;
-}
-.puzzle .found1 {
-  background-color: #B399FF;
-  color: #000;
-  border-radius: 2px;
-}
-.puzzle .found2 {
-  background-color: #FFFF73;
-  color: #000;
-  border-radius: 2px;
-}
-.puzzle .found3 {
-  background-color: #FF9673;
-  color: #000;
-  border-radius: 2px;
-}
-.puzzle .found4 {
-  background-color: #BFFFFF;
-  color: #000;
-  border-radius: 2px;
-}
-.puzzle .found5 {
-  background-color: #FFA64D;
-  color: #000;
-  border-radius: 2px;
-}
-.puzzle .found6 {
-  background-color: #BFBFFF;
-  color: #000;
-  border-radius: 2px;
-}
-.puzzle .found7 {
-  background-color: #FFB871;
-  color: #000;
-  border-radius: 2px;
-}
-.puzzle .found8 {
-  background-color: #B9FF73;
-  color: #000;
-  border-radius: 2px;
-}
-.puzzle .found9 {
-  background-color: ##2626FF;
   color: #000;
   border-radius: 2px;
 }
