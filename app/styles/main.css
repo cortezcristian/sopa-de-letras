@@ -67,14 +67,14 @@ body {
     padding-top: 13px;
     width: 136px;
     height: 44px;
-    /*background: transparent url("../images/nav-background.png") no-repeat 0 0;*/
-    background: transparent url("../images/nav-background.png") no-repeat center center;
     text-align: center;
     color: #FFFFFF;
+    background-color: rgb(170,196,16);
+    border-radius: 5px;
 }
 
 .wf-menu-side li a:hover {
-    background-color: transparent;
+    background-color: rgb(160,186,6);
     opacity: 0.9;
 }
 
