@@ -17,6 +17,9 @@ angular.module('sopaDeLetrasApp')
 
         $rootScope.solve = function(){
             wordfindgame.solve(gamePuzzle, words);
+            if(confirm('¿Quieres jugar otra vez?')){
+              $rootScope.start();
+            };
         } 
 
         $rootScope.togglewords = function(){
